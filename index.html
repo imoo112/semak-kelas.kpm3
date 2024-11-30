@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semakan Kelas Akademik Tahun Terkini</title>
+    <style>
+        body {
+            background-image: url('logo kpm 3.png'); /* Gantikan dengan laluan gambar anda */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            margin-top: 100px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input[type="text"], input[type="button"] {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            width: 80%;
+        }
+        input[type="button"] {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #218838;
+        }
+        #keputusan {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            border: 1px solid white;
+            display: none; /* Mula-mula tidak tunjukkan */
+        }
+    </style>
+    <script>
+        function semakKelas() {
+            var nama = document.getElementById("nama").value.trim(); // Trim untuk menghapus ruang kosong
+            var keputusan;
+
+            // Logik untuk mendapatkan keputusan kelas berdasarkan nama 
+            var kelas = {
+                "Hayyan Hanania": "6",
+                "Ahmad Hanief": "6",
+                "Adam Rayyan": "6",
+                "Afifi Putri": "6",
+                "Airin Fatihah": "6",
+                "Airis Amani": "6",
+                "Aisya Arisya": "6",
+                "Akhtar Aisy": "6",
+                "Ahmad Alaik": "6",
+                "Al-Khawarizmi": "6",
+                "Ammar Hariz": "6",
+                "Amni Sofia": "6",
+                "Annur Khairah": "6",
+                "Nurul Arbayah": "6",
+                "Muhammad Azzaieem": "6",
+                "Dhiya Raisya": "6",
+                "Eryna izzayani": "6",
+                "Muhammad Faris Hakimi": "6",
+                "Aisyah Kaisara": "6",
+                "Muhammad Ali Thaqif": "6",
+                "Wan Nurfiruz Eryna": "6",
+                "Wan Muhammad Nawfal": "6",
+                "Muhammad Qais": "6",
+                "Raisya Zulaikha": "6",
+                "Ummi Natasya": "6",
+                "Wan Firas Arsyad": "6",
+                "Quzhier Iman Al Imran": "6", 
+                "Alzam Hafiy": "6",
+                "Aqil Zikry": "6",
+                "Wan Nur Izzah": "6",
+                
+            
+            };
+
+            // Semak nama dalam objek kelas
+            if (kelas[nama]) {
+                keputusan = kelas[nama];
+            } else {
+                keputusan = "Nama tidak ditemui. Sila semak semula.";
+            }
+
+            // Papar keputusan
+            document.getElementById("keputusan").innerHTML = "Nama: " + nama + "<br>Keputusan: " + keputusan;
+            document.getElementById("keputusan").style.display = "block"; // Tunjukkan keputusan
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Semakan Kelas Akademik Tahun Terkini 2025/2026</h1>
+    <input type="text" id="nama" placeholder="Nama PENUH TIDAK SAMPAI BIN nama anda SETIAP HURUF AWAL HURUF BESAR">
+    <input type="button" value="Semak Kelas" onclick="semakKelas()">
+    <div id="keputusan" style="margin-top: 20px;"></div>
+</div>
+
+</body>
+</html>
